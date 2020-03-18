@@ -1,13 +1,215 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    list-style-type: none;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.crypto-table {
+    background: rgba(230, 230, 230, 0.719);
+    width: 100%;
+    font-size: 16px;
+    color: #121212;
+    border-bottom: 1px solid #c5cedb;
+    border-collapse: collapse;
+    border-radius: 5px;
+    box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.53);
+    border: 1px solid black;
+    border-bottom: none;
+
+}
+
+.crypto-table * {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.crypto-table__header {
+    border-bottom: 2px solid black;
+}
+
+.crypto-table__header__data {
+    padding: 8px 8px 15px 8px;
+}
+
+.header__data-coin {
+    padding-left: 25px;
+}
+
+.header__data-measurement {
+    vertical-align: baseline;
+}
+
+.crypto-table__body__data {
+    padding: 8px 8px 15px 8px;
+}
+
+
+.crypto-table-container {
+    width: 50%;
+    min-width: 330px;
+    margin: 10px;
+}
+
+.body__data-coin-value {
+    background-color: #fff;
+    opacity: 0.5;
+    border-radius: 5px;
+    padding-left: 8px;
+    font-weight: 700;
+}
+
+.crypto-table__body__row:hover {
+    background-color: #dfdfdf;
+}
+
+.converter-select {
+    background: transparent;
+    border-radius: 6px;
+    border: 1px solid #DFE1E5;
+    color: rgb(85, 88, 92);
+    font-size: 14px;
+    height: 36px;
+    padding: 0 0 0 12px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.75);
+}
+
+
+.converter-input {
+    background: transparent;
+    border-radius: 6px;
+    border: 1px solid #DFE1E5;
+    color: rgb(85, 88, 92);
+    font-size: 14px;
+    height: 36px;
+    padding: 0 0 0 12px;
+    box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.75);
+}
+
+.converter-input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.converter-item:not(:last-child) {
+    margin-bottom: 20px;
+
+}
+
+.converter-container {
+    display: flex;
+    justify-content: center;
+    max-width: 270px;
+    background-color: #ededed;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.23);
+    margin-top: 10px;
+
+}
+
+.crypto-table__popup {
+    min-width: 150px;
+    background-color: #d1d1d1;
+    position: absolute;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    z-index: 1488;
+    padding: 10px;
+}
+
+.crypto-table__popup__button {
+    border: none;
+    background: none;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.crypto-table__popup__button:hover {
+    background-color: #c4c4c4;
+
+}
+
+.crypto-table__popup__closer {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    right: -5px;
+    top: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.standart-converter {
+    margin: 10px;
+}
+
+.standart-converter__top {
+    font-size: 16px;
+    color: #70757A;
+}
+
+.standart-converter__botom {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.converter-section {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.53);
+}
+
+
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.currency-fail {
+    color: red;
+}
+
+.currency-increase {
+    color: green;
+}
+
+.default-currency {
+    color: black;
 }
